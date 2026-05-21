@@ -10,7 +10,7 @@
         .font-sans { font-family: 'Geist', sans-serif; }
         .font-mono { font-family: 'Geist Mono', monospace; }
         .glow-line {
-            background: linear-gradient(90deg, transparent, rgba(63, 63, 70, 0.2) 50%, transparent);
+            background: linear-gradient(90deg, transparent, rgba(63, 63, 70, 0.15) 50%, transparent);
         }
     </style>
 </head>
@@ -18,31 +18,29 @@
 
     <div class="absolute top-0 left-0 w-full h-[1px] glow-line"></div>
     
-    <header class="max-w-5xl w-full mx-auto px-6 pt-10 pb-6 flex justify-between items-center border-b border-zinc-900">
-        <div class="font-mono text-sm tracking-[0.2em] text-zinc-400 flex items-center gap-3">
-            <span class="text-white font-black">SIGNAL OVER SHILL</span>
-            <span class="text-zinc-800">│</span>
-            <span class="text-emerald-500 font-medium animate-pulse flex items-center gap-1.5">
+    <header class="max-w-4xl w-full mx-auto px-6 pt-10 pb-6 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 border-b border-zinc-9000">
+        <div class="font-mono text-xs sm:text-sm tracking-[0.15em] text-zinc-400 flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3 w-full sm:w-auto">
+            <span class="text-white font-black whitespace-nowrap">SIGNAL OVER SHILL</span>
+            <span class="hidden sm:inline text-zinc-800">│</span>
+            <span class="text-emerald-500 font-medium animate-pulse flex items-center gap-1.5 text-xs">
                 <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 inline-block"></span>NODE // ONLINE
             </span>
         </div>
-        <div class="font-mono text-sm text-zinc-500 tracking-wider">
+        <div class="font-mono text-xs text-zinc-500 tracking-wider self-end sm:self-auto">
             [v2.0.26]
         </div>
     </header>
 
-    <main class="max-w-3xl w-full mx-auto px-6 py-10 flex-grow space-y-14">
+    <main class="max-w-3xl w-full mx-auto px-6 py-8 flex-grow space-y-12">
         
-        <section class="space-y-6">
-            <div class="space-y-4">
-                <h1 class="text-3xl md:text-5xl font-black tracking-tight text-white leading-tight">
-                    El capital busca soberanía. <br>
-                    La liquidez huye de la fricción. <br>
-                    <span class="text-zinc-400 font-light">Nosotros construimos la arquitectura.</span>
-                </h1>
-            </div>
+        <section class="space-y-4">
+            <h1 class="text-3xl md:text-5xl font-black tracking-tight text-white leading-tight">
+                El capital busca soberanía. <br>
+                La liquidez huye de la fricción. <br>
+                <span class="text-zinc-400 font-light">Nosotros construimos la arquitectura.</span>
+            </h1>
 
-            <div class="w-full space-y-4 pt-2">
+            <div class="w-full space-y-3 pt-2">
                 <p class="text-zinc-200 font-medium text-lg md:text-xl text-justify leading-relaxed">
                     La economía agéntica no es el futuro. Es el estándar operativo de quienes ya no compiten por atención, sino por asentamiento real de valor.
                 </p>
@@ -51,13 +49,13 @@
                 </p>
             </div>
 
-            <div class="bg-zinc-950 border border-zinc-900 p-5 font-mono text-base tracking-tight space-y-1.5">
+            <div class="bg-zinc-950 border border-zinc-900 p-5 font-mono text-base tracking-tight space-y-1.5 max-w-xl">
                 <p class="text-zinc-500"><span class="text-zinc-700">&gt;</span> Todo lo que requiere persuasión es shill.</p>
                 <p class="text-emerald-400"><span class="text-zinc-700">&gt;</span> Lo que opera sin permiso es señal.</p>
             </div>
         </section>
 
-        <section class="space-y-6 border-t border-zinc-900 pt-8">
+        <section class="space-y-4 border-t border-zinc-900 pt-8">
             <div class="font-mono text-sm uppercase tracking-widest text-emerald-500 font-semibold">
                 PALANCA ASIMÉTRICA // APALANCAMIENTO AGÉNTICO
             </div>
@@ -71,23 +69,23 @@
             </p>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2 text-base text-zinc-400 font-light">
-                <div class="space-y-2 border-t border-zinc-950 pt-3">
+                <div class="space-y-1.5 border-t border-zinc-950 pt-3">
                     <p class="font-mono text-sm uppercase tracking-wider text-sky-400/90 font-bold">// FILOSOFÍA DE DESPLIEGUE</p>
                     <p class="text-justify text-zinc-400">No nos integramos en tu organigrama. Operamos como una capa externa soberana: infraestructura propia, entornos totalmente aislados y orquestación remota.</p>
                 </div>
-                <div class="space-y-2 border-t border-zinc-950 pt-3">
+                <div class="space-y-1.5 border-t border-zinc-950 pt-3">
                     <p class="font-mono text-sm uppercase tracking-wider text-sky-400/90 font-bold">// DINÁMICA DE VALOR</p>
                     <p class="text-justify text-zinc-400">Tú determinas las restricciones y los parámetros de riesgo. <br>El sistema ejecuta la fricción en bucle y asienta el valor en el ledger. <br>La ejecución es automatizada. El coste marginal es cero.</p>
                 </div>
             </div>
         </section>
 
-        <section class="space-y-8 border-t border-zinc-900 pt-8">
+        <section class="space-y-6 border-t border-zinc-900 pt-8">
             <div class="font-mono text-sm uppercase tracking-widest text-zinc-500 font-semibold">
                 UNIDADES DE VALOR
             </div>
 
-            <div class="border border-zinc-900 bg-zinc-950/20 p-6 md:p-8 space-y-4 transition hover:border-zinc-800">
+            <div class="border border-zinc-900 bg-zinc-950/20 p-6 md:p-8 space-y-4">
                 <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 border-b border-zinc-900 pb-3">
                     <div class="font-mono text-base tracking-tight text-white font-bold">
                         01 // AGENTIC GTM ENGINE (INFRA & DePIN)
@@ -98,16 +96,21 @@
                 </div>
                 
                 <p class="text-zinc-300 font-light text-base leading-relaxed text-justify">
-                    Sistemas autónomos integrados en tu stack mediante entornos aislados de solo lectura. Ingestan el desarrollo técnico de tus repositorios in tiempo real, lo traducen en tesis macro de alta densidad y automatizan su distribución allí donde se liquida el capital institucional.
+                    Sistemas autónomos integrados en tu stack mediante entornos aislados de solo lectura. Ingestan el desarrollo técnico de tus repositorios en tiempo real, lo traducen en tesis macro de alta densidad y automatizan su distribución allí donde se liquida el capital institucional.
                 </p>
 
-                <div class="bg-black border border-zinc-900 p-5 font-mono text-base text-zinc-400 space-y-3">
-                    <div class="text-zinc-500 uppercase tracking-wider text-sm font-bold">En la práctica:</div>
-                    <ul class="space-y-2 list-none pl-0 text-sm md:text-base">
-                        <li class="flex items-start gap-2"><span class="text-emerald-500">—</span> <span><strong>Sintetización Algorítmica:</strong> Monitoreo continuo de tu stack para convertir commits en narrativa técnica dominante.</span></li>
-                        <li class="flex items-start gap-2"><span class="text-emerald-500">—</span> <span><strong>Distribución Ininterrumpida:</strong> Inserción automatizada de tu tesis en firmas de research y nodos de decisión.</span></li>
-                        <li class="flex items-start gap-2"><span class="text-emerald-500">—</span> <span><strong>Aislamiento Operativo:</strong> Toda la arquitectura corre sobre nuestros servidores. No consumes recursos humanos.</span></li>
-                    </ul>
+                <div class="w-full">
+                    <div class="flex font-mono text-xs text-zinc-500 bg-zinc-950 border-t border-x border-zinc-900 px-4 py-1.5 gap-2 w-max">
+                        <span class="text-emerald-500 font-bold">■</span> GTM_ENGINE.sys
+                    </div>
+                    <div class="bg-zinc-950/80 border border-zinc-900 p-5 font-mono text-base text-zinc-400 space-y-3">
+                        <div class="text-zinc-500 uppercase tracking-wider text-xs font-bold">En la práctica:</div>
+                        <ul class="space-y-2 list-none pl-0 text-sm md:text-base">
+                            <li class="flex items-start gap-2"><span class="text-emerald-500">—</span> <span><strong>Sintetización Algorítmica:</strong> Monitoreo continuo de tu stack para convertir commits en narrativa técnica dominante.</span></li>
+                            <li class="flex items-start gap-2"><span class="text-emerald-500">—</span> <span><strong>Distribución Ininterrumpida:</strong> Inserción automatizada de tu tesis en firmas de research y nodos de decisión.</span></li>
+                            <li class="flex items-start gap-2"><span class="text-emerald-500">—</span> <span><strong>Aislamiento Operativo:</strong> Toda la arquitectura corre sobre nuestros servidores. No consumes recursos humanos.</span></li>
+                        </ul>
+                    </div>
                 </div>
                 
                 <div class="text-base font-mono text-zinc-500">
@@ -115,7 +118,7 @@
                 </div>
             </div>
 
-            <div class="border border-zinc-900 bg-zinc-950/20 p-6 md:p-8 space-y-4 transition hover:border-zinc-800">
+            <div class="border border-zinc-900 bg-zinc-950/20 p-6 md:p-8 space-y-4">
                 <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 border-b border-zinc-900 pb-3">
                     <div class="font-mono text-base tracking-tight text-white font-bold">
                         02 // CANALES DE LIQUIDEZ SOBERANA (BTC-NATIVE)
@@ -129,11 +132,16 @@
                     Diseño e implementación de arquitecturas transaccionales basadas en la capa base de Bitcoin y Lightning Network. Desacoplamos tu flujo de caja de la fragilidad bancaria tradicional, moviendo el asentamiento de valor al tiempo real.
                 </p>
 
-                <div class="bg-black border border-zinc-900 p-5 font-mono text-sm text-zinc-400 space-y-2 text-sm md:text-base">
-                    <div class="text-zinc-500 uppercase tracking-wider text-sm font-bold">En la práctica:</div>
-                    <p><span class="text-emerald-500">—</span> <strong>Topología de Tesorería Inmune:</strong> Modelos multifirma adaptados a tus restricciones operativas.</p>
-                    <p><span class="text-emerald-500">—</span> <strong>Vectores Criptográficos Native:</strong> Pasarelas programables integradas en flujos de cobro y payout.</p>
-                    <p><span class="text-emerald-500">—</span> <strong>Auditoría Matemática:</strong> Sistemas automáticos de verificación de saldos y conciliación on-chain.</p>
+                <div class="w-full">
+                    <div class="flex font-mono text-xs text-zinc-500 bg-zinc-950 border-t border-x border-zinc-900 px-4 py-1.5 gap-2 w-max">
+                        <span class="text-sky-400 font-bold">■</span> LIQUIDITY.key
+                    </div>
+                    <div class="bg-zinc-950/80 border border-zinc-900 p-5 font-mono text-sm text-zinc-400 space-y-2 text-sm md:text-base">
+                        <div class="text-zinc-500 uppercase tracking-wider text-sm font-bold">En la práctica:</div>
+                        <p><span class="text-emerald-500">—</span> <strong>Topología de Tesorería Inmune:</strong> Modelos multifirma adaptados a tus restricciones operativas.</p>
+                        <p><span class="text-emerald-500">—</span> <strong>Vectores Criptográficos Native:</strong> Pasarelas programables integradas en flujos de cobro y payout.</p>
+                        <p><span class="text-emerald-500">—</span> <strong>Auditoría Matemática:</strong> Sistemas automáticos de verificación de saldos y conciliación on-chain.</p>
+                    </div>
                 </div>
                 
                 <div class="text-sm font-mono text-zinc-500">
@@ -141,7 +149,7 @@
                 </div>
             </div>
 
-            <div class="border border-zinc-900 bg-zinc-950/20 p-6 md:p-8 space-y-4 transition hover:border-zinc-800">
+            <div class="border border-zinc-900 bg-zinc-950/20 p-6 md:p-8 space-y-4">
                 <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 border-b border-zinc-900 pb-3">
                     <div class="font-mono text-base tracking-tight text-white font-bold">
                         03 // COMERCIO AUTÓNOMO (MACHINE-TO-MACHINE)
@@ -155,11 +163,16 @@
                     Ingeniería de incentivos y setups técnicos para la interacción económica directa entre agentes de IA y capas de infraestructura descentralizada (DePIN, mercados de cómputo y almacenamiento). Configuramos los sistemas para que tus aplicaciones consuman y provean valor pagándose entre sí de forma autónoma.
                 </p>
 
-                <div class="bg-black border border-zinc-900 p-5 font-mono text-sm text-zinc-400 space-y-2 text-sm md:text-base">
-                    <div class="text-zinc-500 uppercase tracking-wider text-sm font-bold">En la práctica:</div>
-                    <p><span class="text-emerald-500">—</span> <strong>Protocolos de Liquidación M2M:</strong> Micro-pasarelas y billeteras agénticas para intercambio autónomo.</p>
-                    <p><span class="text-emerald-500">—</span> <strong>Estructuración de Colaterales:</strong> Mecanismos automáticos de depósito, escrow y penalización (slashing).</p>
-                    <p><span class="text-emerald-500">—</span> <strong>Optimización de Coste Marginal:</strong> Canales eficientes para facturación desacoplada de horas humanas.</p>
+                <div class="w-full">
+                    <div class="flex font-mono text-xs text-zinc-500 bg-zinc-950 border-t border-x border-zinc-900 px-4 py-1.5 gap-2 w-max">
+                        <span class="text-purple-400 font-bold">■</span> M2M_CORE.cfg
+                    </div>
+                    <div class="bg-zinc-950/80 border border-zinc-900 p-5 font-mono text-sm text-zinc-400 space-y-2 text-sm md:text-base">
+                        <div class="text-zinc-500 uppercase tracking-wider text-sm font-bold">En la práctica:</div>
+                        <p><span class="text-emerald-500">—</span> <strong>Protocolos de Liquidación M2M:</strong> Micro-pasarelas y billeteras agénticas para intercambio autónomo.</p>
+                        <p><span class="text-emerald-500">—</span> <strong>Estructuración de Colaterales:</strong> Mecanismos automáticos de depósito, escrow y penalización (slashing).</p>
+                        <p><span class="text-emerald-500">—</span> <strong>Optimización de Coste Marginal:</strong> Canales eficientes para facturación desacoplada de horas humanas.</p>
+                    </div>
                 </div>
                 
                 <div class="text-sm font-mono text-zinc-500">
@@ -168,72 +181,72 @@
             </div>
         </section>
 
-        <section class="max-w-xl mx-auto space-y-4 border-t border-zinc-900 pt-8 w-full">
+        <section class="max-w-xl mx-auto space-y-3 border-t border-zinc-900 pt-8 w-full px-1">
             <div class="font-mono text-sm uppercase tracking-widest text-zinc-500 font-semibold">
                 SKIN IN THE GAME
             </div>
-            <p class="text-lg md:text-xl text-white font-bold tracking-tight text-justify leading-snug">
+            <p class="text-base md:text-lg text-white font-bold tracking-tight text-justify leading-snug">
                 Si no me crees o no lo entiendes, no tengo tiempo para intentar convencerte del valor de la autonomía y la soberanía, lo siento.
             </p>
-            <p class="text-zinc-400 font-light text-base leading-relaxed text-justify">
-                Bahu el despliegue actual de MiCA y DAC8 en Europa, la descentralización dejó de ser una postura ideológica; es infraestructura básica de supervivencia. El estrangulamiento de la banca corresponsal y la fiscalización automatizada no son amenazas futuras; son las restricciones operativas del entorno en este instante. 
+            <p class="text-zinc-400 font-light text-sm md:text-base leading-relaxed text-justify">
+                Bajo el despliegue actual de MiCA y DAC8 en Europa, la descentralización dejó de ser una postura ideológica; es infraestructura básica de supervivencia. El estrangulamiento de la banca corresponsal y la fiscalización automatizada no son amenazas futuras; son las restricciones operativas del entorno en este instante. 
                 <br><br>
                 Trabajamos exclusivamente con operadores que ya han experimentado la asfixia de las capas heredadas: congelaciones discrecionales, riesgo de contraparte fuera de control y fricción burocrática ralentizando el movimiento del capital.
             </p>
-            <p class="text-zinc-500 font-mono text-sm tracking-tight pt-1">
+            <p class="text-zinc-500 font-mono text-xs tracking-tight pt-1">
                 No gestionamos comunidades. No fabricamos métricas de vanidad. Entregamos mecanismos inmutables.
             </p>
         </section>
 
-        <section class="border-t border-b border-zinc-900/60 py-6 my-2 max-w-xl mx-auto w-full">
-            <p class="text-base md:text-lg font-light text-zinc-200 text-center tracking-wide leading-relaxed font-sans italic px-2">
+        <section class="border-t border-b border-zinc-900 py-6 max-w-xl mx-auto w-full">
+            <p class="text-sm md:text-base font-light text-zinc-200 text-center tracking-wide leading-relaxed font-sans italic px-2">
                 "La transición hacia la arquitectura agéntica y los canales soberanos no es un pitch comercial; es la reorganización forzosa del comercio global. <br class="hidden md:inline">
                 <span class="text-emerald-400 font-bold not-italic tracking-normal">El capital es implacable:</span> fluye hacia la eficiencia matemática y huye de la fricción humana."
             </p>
         </section>
 
-        <section class="max-w-xl mx-auto space-y-6 w-full">
+        <section class="max-w-xl mx-auto space-y-5 w-full px-1">
             <div class="space-y-3">
                 <div class="font-mono text-sm uppercase tracking-widest text-emerald-500 font-semibold">
                     FILTRO DE ENTRADA
                 </div>
-                <h3 class="text-xl font-bold tracking-tight text-white">
+                <h3 class="text-lg md:text-xl font-bold tracking-tight text-white">
                     No programamos llamadas de cortesía. No educamos escépticos.
                 </h3>
-                <p class="text-zinc-400 font-light text-base leading-relaxed text-justify">
+                <p class="text-zinc-400 font-light text-sm md:text-base leading-relaxed text-justify">
                     La transición hacia la arquitectura agéntica no es una opción de mercado; es la reordenación forzosa de tus flujos de valor. Asignamos nuestra capacidad operativa a un máximo de dos despliegues de gran escala por trimestre. Diseñado únicamente para fundadores y responsables de tesorería que asumen tres axiomas:
                 </p>
             </div>
 
-            <div class="font-mono text-base space-y-2 text-zinc-500 border-l border-zinc-800 pl-4 leading-relaxed">
+            <div class="font-mono text-sm md:text-base space-y-2 text-zinc-500 border-l border-zinc-800 pl-4 leading-relaxed">
                 <p><span class="text-zinc-400 font-bold">—</span> La velocidad de cómputo aplasta a la burocracia corporativa.</p>
                 <p><span class="text-zinc-400 font-bold">—</span> La inacción frente al entorno regulatorio es un vector de riesgo crítico.</p>
                 <p><span class="text-zinc-400 font-bold">—</span> El software no pide permiso; se impone por pura gravedad económica.</p>
             </div>
 
-            <p class="text-sm text-zinc-500 italic font-light">
+            <p class="text-xs text-zinc-500 italic font-light">
                 Si buscas certezas institucionales, mantén tu estructura en el circuito tradicional. Si necesitas asimetría técnica, sincroniza señal.
             </p>
 
             <div class="flex flex-col sm:flex-row gap-4 pt-2">
-                <a href="https://t.me/tu_usuario_telegram" target="_blank" class="flex-1 bg-black text-white font-mono text-sm font-bold tracking-wider p-4 border border-zinc-800 hover:border-emerald-500 hover:text-emerald-400 transition-all duration-300 text-center uppercase">
-                    [ EXEC // PROTOCOLO DE ADMISIÓN ]
+                <a href="https://t.me/tu_usuario_telegram" target="_blank" class="flex-1 bg-emerald-400 text-black font-mono text-sm font-bold tracking-widest py-4 border border-emerald-400 hover:bg-black hover:text-emerald-400 transition-all duration-300 text-center uppercase">
+                    [ EXEC ]
                 </a>
-                <a href="https://github.com/SignalOverShill" target="_blank" class="flex-1 bg-black text-zinc-500 font-mono text-sm font-bold tracking-wider p-4 border border-zinc-900 hover:border-zinc-700 hover:text-zinc-300 transition-all duration-300 text-center uppercase">
-                    [ INSPECT // CAPA DE CÓDIGO ]
+                <a href="https://github.com/SignalOverShill" target="_blank" class="flex-1 bg-black text-zinc-400 font-mono text-sm font-bold tracking-widest py-4 border border-zinc-900 hover:border-zinc-700 hover:text-zinc-200 transition-all duration-300 text-center uppercase">
+                    [ INSPECT ]
                 </a>
             </div>
         </section>
 
     </main>
 
-    <footer class="max-w-5xl w-full mx-auto px-6 py-10 border-t border-zinc-900 flex flex-col md:flex-row justify-between items-center gap-6 font-mono text-sm text-zinc-600">
-        <div class="space-y-2 text-center md:text-left">
-            <p class="text-zinc-300 font-bold tracking-wider text-base">_init_@signalovershill.com</p>
+    <footer class="max-w-4xl w-full mx-auto px-6 py-8 border-t border-zinc-900 flex flex-col md:flex-row justify-between items-center gap-6 font-mono text-xs text-zinc-600">
+        <div class="space-y-1.5 text-center md:text-left">
+            <p class="text-zinc-300 font-bold tracking-wider text-sm">_init_@signalovershill.com</p>
             <p class="text-zinc-600 text-xs">SIGNAL OVER SHILL &copy; 2026 │ La matemática no negocia. La liquidez decide quién sobrevive.</p>
         </div>
         
-        <div class="flex items-center gap-6 text-zinc-500 bg-zinc-950/40 p-3 border border-zinc-900 rounded-none">
+        <div class="flex items-center gap-5 text-zinc-500 bg-zinc-950/50 p-2.5 border border-zinc-900">
             <a href="https://x.com/tu_perfil" target="_blank" class="hover:text-white transition-colors" title="X // Twitter">
                 <svg class="w-5 h-5 fill-currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
             </a>
@@ -243,7 +256,7 @@
             <a href="https://t.me/tu_usuario_telegram" target="_blank" class="hover:text-emerald-400 transition-colors" title="Telegram">
                 <svg class="w-5 h-5 fill-currentColor" viewBox="0 0 24 24"><path d="M20.665 3.717l-17.73 6.837c-1.21.486-1.203 1.161-.222 1.462l4.552 1.42l10.532-6.645c.498-.303.953-.14.579.192l-8.533 7.701l-.333 4.981c.488 0 .704-.224.977-.489l2.35-2.285l4.888 3.61c.901.496 1.546.241 1.772-.838l3.202-15.093c.329-1.318-.499-1.913-1.363-1.533z"/></svg>
             </a>
-            <a href="#nostr" class="hover:text-purple-400 transition-colors opacity-40 cursor-not-allowed" title="Nostr Account Pending Setup">
+            <a href="#nostr" class="hover:text-purple-400 transition-colors" title="Nostr Account Ready">
                 <svg class="w-5 h-5 stroke-current fill-none" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><circle cx="5" cy="5" r="1"/><circle cx="19" cy="19" r="1"/><path d="M7 7l10 10M5 12h14M12 5v14"/></svg>
             </a>
         </div>
