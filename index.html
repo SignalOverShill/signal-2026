@@ -99,9 +99,9 @@
                     <p class="text-white font-black text-xl md:text-2xl tracking-tight leading-tight">
                         Las máquinas no buscan atención. Liquidan saldos.
                     </p>
-                    <p class="font-mono text-sm md:text-base font-bold text-emerald-400 tracking-wide min-h-[2.5rem] flex items-start sm:items-center gap-1.5 leading-relaxed">
-                        <span id="typewriter-text"></span><span id="typewriter-cursor" class="w-2 h-4 md:w-2 md:h-5 bg-emerald-400 inline-block animate-terminal-blink"></span>
-                    </p>
+                    <div class="font-mono text-base md:text-lg font-bold text-emerald-400 tracking-wide min-h-[4.5rem] sm:min-h-[2.5rem] leading-relaxed pt-1">
+                        <span id="typewriter-text"></span><span id="typewriter-cursor" class="w-2 h-4 md:w-2.5 md:h-5 bg-emerald-400 inline-block animate-terminal-blink ml-1 translate-y-[2px] align-baseline"></span>
+                    </div>
                 </div>
             </div>
         </section>
@@ -427,7 +427,7 @@
             
             const goldenPhrase = "Si tu negocio sigue dependiendo del clic humano, eres la fricción que el código está eliminando.";
             let charIndex = 0;
-            const typingSpeed = 30; // Velocidad de tecleado en ms
+            const typingSpeed = 30; // Velocidad de renderizado por carácter
             
             const logTemplates = [
                 { sys: "SYS_ENG", msg: "Scan completed on DePIN compute pools // 0 anomalies." },
@@ -468,11 +468,9 @@
             }
 
             function startLiveStream() {
-                // Lanza los primeros logs de forma asíncrona inmediata
                 for(let i=0; i<3; i++) { 
                     setTimeout(pushLog, i * 350); 
                 }
-                // Activa el bucle de actualización periódica
                 setInterval(pushLog, 4500);
             }
 
@@ -484,13 +482,13 @@
                     charIndex++;
                     setTimeout(typeWriter, typingSpeed);
                 } else {
-                    // El tipado ha concluido con éxito; arranca el stream asíncrono inferior tras 1s
-                    setTimeout(startLiveStream, 1000);
+                    // Cierre del tipado: El cursor permanece en su lugar definitivo y arranca el stream inferior
+                    setTimeout(startLiveStream, 800);
                 }
             }
 
-            // Inicializa la secuencia tras el render primario de la página
-            setTimeout(typeWriter, 500);
+            // Inicialización retrasada para no comprometer la carga inicial
+            setTimeout(typeWriter, 400);
         });
     </script>
 
