@@ -5,27 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SIGNAL OVER SHILL — Arquitectura de liquidez soberana y cómputo agéntico</title>
 
-    <!-- SEO básico -->
-    <meta name="description" content="Arquitectura de liquidez soberana, canales Bitcoin/Lightning y sistemas agénticos de distribución para equipos que ya mueven volumen en cripto y quieren desacoplarse de la banca tradicional y de las horas humanas.">
-    <meta name="language" content="es">
-    <meta name="robots" content="index,follow">
-    <meta name="geo.region" content="ES-CT">
-    <meta name="geo.placename" content="Barcelona">
-
-    <!-- Open Graph / Twitter -->
-    <meta property="og:title" content="SIGNAL OVER SHILL — Arquitectura de liquidez soberana">
-    <meta property="og:description" content="Arquitectura BTC-native, canales Lightning y cómputo agéntico para mover capital fuera de la fricción bancaria y las horas humanas.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://signalovershill.com">
-    <!-- Añade og:image cuando tengas preview -->
-    <!-- <meta property="og:image" content="https://signalovershill.com/og-image.png"> -->
-
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@signalovershill">
-    <meta name="twitter:title" content="SIGNAL OVER SHILL — Arquitectura de liquidez soberana">
-    <meta name="twitter:description" content="Arquitectura BTC-native, canales Lightning y cómputo agéntico para mover capital fuera de la fricción bancaria y las horas humanas.">
-
+    <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Fonts + base styles -->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;700&family=Geist:wght@300;400;500;600;700;900&display=swap');
         .font-sans { font-family: 'Geist', sans-serif; }
@@ -34,6 +17,27 @@
             background: linear-gradient(90deg, transparent, rgba(63, 63, 70, 0.2) 50%, transparent);
         }
     </style>
+
+    <!-- Meta SEO básicos -->
+    <meta name="description" content="Arquitectura de liquidez soberana, canales Bitcoin/Lightning y sistemas agénticos de distribución para equipos que ya mueven volumen en cripto y quieren desacoplarse de la banca tradicional y de las horas humanas.">
+    <meta name="language" content="es">
+    <meta name="robots" content="index,follow">
+    <meta name="geo.region" content="ES-CT">
+    <meta name="geo.placename" content="Barcelona">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="SIGNAL OVER SHILL — Arquitectura de liquidez soberana">
+    <meta property="og:description" content="Arquitectura BTC-native, canales Lightning y cómputo agéntico para mover capital fuera de la fricción bancaria y las horas humanas.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://signalovershill.com">
+    <!-- Cuando tengas imagen de preview, añádela aquí -->
+    <!-- <meta property="og:image" content="https://signalovershill.com/og-image.png"> -->
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@signalovershill">
+    <meta name="twitter:title" content="SIGNAL OVER SHILL — Arquitectura de liquidez soberana">
+    <meta name="twitter:description" content="Arquitectura BTC-native, canales Lightning y cómputo agéntico para mover capital fuera de la fricción bancaria y las horas humanas.">
 </head>
 <body class="min-h-screen flex flex-col justify-between selection:bg-zinc-800 selection:text-emerald-400 overflow-x-hidden font-sans">
 
@@ -59,7 +63,7 @@
 
         <!-- HERO -->
         <section class="relative space-y-8">
-            <!-- Halo sutil -->
+            <!-- Halo suave detrás del hero -->
             <div class="pointer-events-none absolute -top-10 -left-32 w-72 h-72 bg-emerald-500/10 blur-3xl rounded-full"></div>
 
             <div class="space-y-4 relative">
@@ -364,11 +368,12 @@
             </div>
 
             <div class="flex flex-col sm:flex-row gap-4 pt-4">
-                <!-- Rellena href cuando tengas el canal que quieras usar -->
+                <!-- EXEC: añade tu enlace cuando lo tengas -->
                 <a href=""
                    class="flex-1 bg-emerald-400 text-black font-mono text-xs md:text-sm font-bold tracking-[0.25em] py-4 border border-emerald-400 hover:bg-black hover:text-emerald-400 transition-all duration-300 text-center uppercase rounded">
                     [ EXEC : iniciar desplegue ]
                 </a>
+                <!-- INSPECT: apunta a tu GitHub -->
                 <a href="https://github.com/SignalOverShill"
                    target="_blank"
                    class="flex-1 bg-zinc-900 text-emerald-400 font-mono text-xs md:text-sm font-bold tracking-[0.25em] py-4 border border-emerald-700 hover:bg-emerald-400 hover:text-black transition-all duration-300 text-center uppercase rounded">
