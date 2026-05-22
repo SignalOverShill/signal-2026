@@ -1,9 +1,30 @@
 <!DOCTYPE html>
-<html lang="es" class="bg-black text-zinc-300 antialiased scroll-smooth">
+<html lang="es-ES" class="bg-black text-zinc-300 antialiased scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SIGNAL OVER SHILL — Arquitectura de Liquidez Soberana</title>
+    <title>SIGNAL OVER SHILL — Arquitectura de liquidez soberana y cómputo agéntico</title>
+
+    <!-- SEO básico -->
+    <meta name="description" content="Arquitectura de liquidez soberana, canales Bitcoin/Lightning y sistemas agénticos de distribución para equipos que ya mueven volumen en cripto y quieren desacoplarse de la banca tradicional y de las horas humanas.">
+    <meta name="language" content="es">
+    <meta name="robots" content="index,follow">
+    <meta name="geo.region" content="ES-CT">
+    <meta name="geo.placename" content="Barcelona">
+
+    <!-- Open Graph / Twitter -->
+    <meta property="og:title" content="SIGNAL OVER SHILL — Arquitectura de liquidez soberana">
+    <meta property="og:description" content="Arquitectura BTC-native, canales Lightning y cómputo agéntico para mover capital fuera de la fricción bancaria y las horas humanas.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://signalovershill.com">
+    <!-- Añade og:image cuando tengas preview -->
+    <!-- <meta property="og:image" content="https://signalovershill.com/og-image.png"> -->
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@signalovershill">
+    <meta name="twitter:title" content="SIGNAL OVER SHILL — Arquitectura de liquidez soberana">
+    <meta name="twitter:description" content="Arquitectura BTC-native, canales Lightning y cómputo agéntico para mover capital fuera de la fricción bancaria y las horas humanas.">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;700&family=Geist:wght@300;400;500;600;700;900&display=swap');
@@ -37,8 +58,11 @@
     <main class="max-w-4xl w-full mx-auto px-6 py-10 flex-grow space-y-16">
 
         <!-- HERO -->
-        <section class="space-y-8">
-            <div class="space-y-4">
+        <section class="relative space-y-8">
+            <!-- Halo sutil -->
+            <div class="pointer-events-none absolute -top-10 -left-32 w-72 h-72 bg-emerald-500/10 blur-3xl rounded-full"></div>
+
+            <div class="space-y-4 relative">
                 <h1 class="text-3xl md:text-5xl font-black tracking-tight text-white leading-tight">
                     El capital busca soberanía. <br>
                     La liquidez huye de la fricción. <br>
@@ -48,7 +72,7 @@
                 </h1>
             </div>
 
-            <div class="w-full space-y-6 pt-1">
+            <div class="w-full space-y-6 pt-1 relative">
                 <p class="text-sky-400/90 text-base md:text-lg leading-relaxed text-justify">
                     Sin humo. Sin maquillar funnels heredados. <br>
                     Diseñamos e instalamos arquitectura de liquidez soberana y enjambres agénticos de distribución
@@ -68,8 +92,8 @@
                 </div>
 
                 <p class="text-zinc-200 font-medium text-lg md:text-xl text-justify leading-relaxed">
-                    La economía agéntica no es el futuro. <br> Es el estándar operativo de quienes ya no compiten por clics
-                    o atención superficial, sino por flujo de caja y resultados liquidados en su balance. <br> Si sigues jugando
+                    La economía agéntica no es el futuro. Es el estándar operativo de quienes ya no compiten por clics
+                    o atención superficial, sino por flujo de caja y resultados liquidados en su balance. Si sigues jugando
                     al juego de la atención, estás compitiendo en un tablero desfasado.
                 </p>
             </div>
@@ -340,11 +364,13 @@
             </div>
 
             <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                <!-- Rellena href cuando tengas el canal que quieras usar -->
                 <a href=""
                    class="flex-1 bg-emerald-400 text-black font-mono text-xs md:text-sm font-bold tracking-[0.25em] py-4 border border-emerald-400 hover:bg-black hover:text-emerald-400 transition-all duration-300 text-center uppercase rounded">
                     [ EXEC : iniciar desplegue ]
                 </a>
-                <a href=""
+                <a href="https://github.com/SignalOverShill"
+                   target="_blank"
                    class="flex-1 bg-zinc-900 text-emerald-400 font-mono text-xs md:text-sm font-bold tracking-[0.25em] py-4 border border-emerald-700 hover:bg-emerald-400 hover:text-black transition-all duration-300 text-center uppercase rounded">
                     [ INSPECT : revisar arquitectura ]
                 </a>
@@ -365,10 +391,12 @@
         
         <div class="flex items-center justify-center gap-5 text-zinc-500 bg-zinc-950/60 px-4 py-2.5 border border-zinc-900 rounded">
             <!-- X / Twitter -->
-            <a href="" target="_blank" class="hover:text-white transition-colors" title="X // Twitter">
-                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            <a href="https://x.com/signalovershill" target="_blank" class="hover:text-white transition-colors" title="X // Twitter">
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                </svg>
             </a>
             <!-- GitHub -->
             <a href="https://github.com/SignalOverShill" target="_blank" class="hover:text-white transition-colors" title="GitHub">
-                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-           
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                    
