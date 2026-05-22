@@ -150,10 +150,7 @@
                         // FILOSOFÍA DE DESPLIEGUE
                     </p>
                     <p class="text-justify text-zinc-300 leading-snug">
-                        No nos integramos en tu organigrama.
-                    </p>
-                    <p class="text-justify text-zinc-300 leading-snug">
-                        Operamos como una capa externa soberana: infraestructura propia,
+                        No nos integramos en tu organigrama. Operamos como una capa externa soberana: infraestructura propia,
                         entornos totalmente aislados y orquestación remota sobre tu stack.
                     </p>
                 </div>
@@ -345,7 +342,7 @@
             </div>
         </section>
 
-        <section class="space-y-10 border-t border-zinc-900 pt-10 w-full">
+        <section id="skin-in-the-game-section" class="space-y-10 border-t border-zinc-900 pt-10 w-full">
             <div class="font-mono text-xs md:text-sm uppercase tracking-[0.25em] text-emerald-500 font-semibold">
                 SKIN IN THE GAME
             </div>
@@ -381,14 +378,14 @@
                 </p>
             </div>
 
-            <div class="mt-6 font-mono text-[11px] md:text-xs uppercase tracking-[0.25em] text-orange-500 text-center">
-                // SI TODO ESTO TE RESULTA OBVIO, EJECUTA
+            <div class="mt-6 font-mono text-[11px] md:text-xs uppercase tracking-[0.25em] text-orange-500 text-center min-h-[1.5rem] leading-relaxed">
+                <span id="typewriter-cta"></span><span id="cta-cursor" class="w-1.5 h-3 bg-orange-500 inline-block animate-terminal-blink ml-1 translate-y-[1px] align-baseline opacity-0"></span>
             </div>
 
             <div class="flex flex-col sm:flex-row gap-4 pt-4">
-                <a href=""
+                <a href="https://t.me/tu_usuario_telegram" target="_blank"
                    class="flex-1 bg-emerald-400 text-black font-mono text-xs md:text-sm font-bold tracking-[0.25em] py-4 border border-emerald-400 hover:bg-black hover:text-emerald-400 transition-all duration-300 text-center uppercase rounded">
-                    [ EXEC : iniciar desplegue ]
+                    [ EXEC : iniciar despliegue ]
                 </a>
                 <a href="https://github.com/SignalOverShill"
                    target="_blank"
@@ -425,13 +422,21 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", () => {
+            // ELEMENTOS APARTADO 01 (HERO)
             const typewriterSpan = document.getElementById("typewriter-text");
             const feedContainer = document.getElementById("live-terminal-feed");
-            
             const goldenPhrase = "Si tu negocio sigue dependiendo del clic humano, eres la fricción que el código está eliminando.";
             let charIndex = 0;
-            const typingSpeed = 30; // Velocidad de renderizado por carácter
+            const typingSpeed = 30;
             
+            // ELEMENTOS APARTADO 02 (CTA LOWER SECTION)
+            const ctaSpan = document.getElementById("typewriter-cta");
+            const ctaCursor = document.getElementById("cta-cursor");
+            const ctaTargetSection = document.getElementById("skin-in-the-game-section");
+            const ctaPhrase = "// SI TODO ESTO TE RESULTA OBVIO, EJECUTA";
+            let ctaCharIndex = 0;
+            let ctaTriggered = false;
+
             const logTemplates = [
                 { sys: "SYS_ENG", msg: "Scan completed on DePIN compute pools // 0 anomalies." },
                 { sys: "LN_NODE", msg: "Routing liquidity path // 3,450 sats settled via Lightning Network." },
@@ -449,48 +454,68 @@
 
             function pushLog() {
                 if (!feedContainer) return;
-
                 const randomLog = logTemplates[Math.floor(Math.random() * logTemplates.length)];
                 const line = document.createElement("p");
-                
                 line.className = "opacity-0 transform translate-y-1 transition-all duration-500 text-justify leading-tight";
                 line.innerHTML = `<span class="text-zinc-700">[${getTimestamp()}]</span> <span class="text-sky-400/80 font-bold">[${randomLog.sys}]</span> ${randomLog.msg}`;
-                
                 feedContainer.appendChild(line);
-
                 requestAnimationFrame(() => {
                     line.classList.remove("opacity-0", "translate-y-1");
                     if(randomLog.sys === "LN_NODE" || randomLog.sys === "M2M_PROT") {
                         line.classList.add("text-zinc-400");
                     }
                 });
-
                 while (feedContainer.children.length > 4) {
                     feedContainer.removeChild(feedContainer.firstChild);
                 }
             }
 
             function startLiveStream() {
-                for(let i=0; i<3; i++) { 
-                    setTimeout(pushLog, i * 350); 
-                }
+                for(let i=0; i<3; i++) { setTimeout(pushLog, i * 350); }
                 setInterval(pushLog, 4500);
             }
 
             function typeWriter() {
                 if (!typewriterSpan) return;
-                
                 if (charIndex < goldenPhrase.length) {
                     typewriterSpan.textContent += goldenPhrase.charAt(charIndex);
                     charIndex++;
                     setTimeout(typeWriter, typingSpeed);
                 } else {
-                    // Cierre del tipado: El cursor permanece en su lugar definitivo y arranca el stream inferior
                     setTimeout(startLiveStream, 800);
                 }
             }
 
-            // Inicialización retrasada para no comprometer la carga inicial
+            // FUNCIÓN TYPEWRITER EXCLUSIVA PARA EL ENLACE NARANJA INTERIOR
+            function typeWriterCTA() {
+                if (!ctaSpan) return;
+                if (ctaCharIndex < ctaPhrase.length) {
+                    ctaSpan.textContent += ctaPhrase.charAt(ctaCharIndex);
+                    ctaCharIndex++;
+                    setTimeout(typeWriterCTA, 35); // Escritura rítmica militar
+                }
+            }
+
+            // INTERSECTION OBSERVER: Dispara el tecleado naranja solo cuando entra en el viewport del dispositivo
+            if (!!window.IntersectionObserver && ctaTargetSection && ctaCursor) {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting && !ctaTriggered) {
+                            ctaTriggered = true;
+                            ctaCursor.classList.remove("opacity-0"); // Activa el cursor naranja inline
+                            setTimeout(typeWriterCTA, 200);
+                            observer.unobserve(ctaTargetSection); // Purgamos observer para liberar memoria
+                        }
+                    });
+                }, { threshold: 0.15 }); // Dispara al asomar el 15% de la sección
+                observer.observe(ctaTargetSection);
+            } else {
+                // Fallback defensivo por si el navegador es antiguo
+                if(ctaCursor) ctaCursor.classList.remove("opacity-0");
+                setTimeout(typeWriterCTA, 2000);
+            }
+
+            // Inicialización secuencia Hero
             setTimeout(typeWriter, 400);
         });
     </script>
