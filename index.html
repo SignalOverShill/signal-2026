@@ -66,7 +66,7 @@
                     El capital busca soberanía. <br>
                     La liquidez huye de la fricción. <br>
                     <span class="text-zinc-400 font-light text-2xl md:text-3xl block mt-3">
-                        Nosotros construimos la arquitectura.
+                        Nosotros construimos la architecture.
                     </span>
                 </h1>
             </div>
@@ -176,33 +176,63 @@
                     </div>
                 </div>
 
-                <div class="flex-1 w-full flex justify-center max-w-lg relative bg-zinc-950/50 rounded-lg p-2 border border-zinc-900">
-                    <svg viewBox="0 0 450 360" class="w-full h-auto text-emerald-400 stroke-current fill-none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M 60 120 L 60 260" stroke="#f43f5e" stroke-width="2.5" stroke-dasharray="6 3" />
-                        <path d="M 390 120 L 390 260" stroke="#34d399" stroke-width="2.5" />
-                        
-                        <g transform="translate(0, 30)">
-                            <polygon points="225 20 375 70 225 120 75 70" stroke="#34d399" stroke-width="2" fill="#022c22" fill-opacity="0.6"/>
-                            <circle cx="225" cy="70" r="14" stroke="#34d399" stroke-width="1" />
-                            <path d="M 225 60 L 225 80 M 215 70 H 235" stroke="#34d399" stroke-width="1" />
-                            <text x="225" y="105" font-family="Geist Mono" font-size="11" text-anchor="middle" fill="#a1a1aa" stroke="none" font-weight="bold">ENJAMBRE DE AGENTES</text>
+                <div class="flex-1 w-full flex justify-center max-w-lg relative bg-zinc-950/30 rounded-lg p-4 border border-zinc-900/80 shadow-2xl">
+                    <svg viewBox="0 0 500 380" class="w-full h-auto stroke-current fill-none text-zinc-800" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="agentic-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#10b981" stop-opacity="0.25"/>
+                                <stop offset="100%" stop-color="#047857" stop-opacity="0.05"/>
+                            </linearGradient>
+                            <linearGradient id="depin-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.2"/>
+                                <stop offset="100%" stop-color="#0369a1" stop-opacity="0.03"/>
+                            </linearGradient>
+                            <linearGradient id="infra-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#e11d48" stop-opacity="0.15"/>
+                                <stop offset="100%" stop-color="#18181b" stop-opacity="0.6"/>
+                            </linearGradient>
+                        </defs>
+
+                        <path d="M 65 90 C 25 150, 25 230, 65 290" stroke="#f43f5e" stroke-width="2" stroke-dasharray="5 3" />
+                        <path d="M 435 290 C 475 230, 475 150, 435 90" stroke="#10b981" stroke-width="2.5" />
+                        <path d="M 250 110 L 250 150 M 250 210 L 250 250" stroke="#27272a" stroke-width="1.5" />
+
+                        <g id="layer-agentic">
+                            <polygon points="250 30 430 70 250 110 70 70" stroke="#10b981" stroke-width="2" fill="url(#agentic-grad)"/>
+                            <circle cx="250" cy="70" r="12" stroke="#34d399" stroke-width="1.2" />
+                            <path d="M 244 70 H 256 M 250 64 V 76" stroke="#34d399" stroke-width="1" />
+                            <path d="M 160 65 L 175 58 L 190 65 L 175 72 Z" stroke="#059669" stroke-width="1"/>
+                            <path d="M 160 70 L 175 63 L 190 70" stroke="#059669" stroke-width="1"/>
+                            <polyline points="310 75 325 62 335 68 345 55" stroke="#34d399" stroke-width="1.5" />
+                            <circle cx="345" cy="55" r="2" fill="#34d399" />
+                            <text x="250" y="125" font-family="Geist Mono" font-size="11" text-anchor="middle" fill="#a1a1aa" stroke="none" font-weight="700" tracking="1">LAYER_01 // ORQUESTACIÓN AGÉNTICA</text>
                         </g>
 
-                        <g transform="translate(0, 130)">
-                            <polygon points="225 20 375 70 225 120 75 70" stroke="#38bdf8" stroke-width="2" fill="#0c4a6e" fill-opacity="0.4"/>
-                            <rect x="212" y="55" width="26" h="30" stroke="#38bdf8" stroke-width="1.5" />
-                            <path d="M 217 62 H 233 M 217 70 H 233 M 217 78 H 233" stroke="#38bdf8" stroke-width="1" />
-                            <text x="225" y="105" font-family="Geist Mono" font-size="11" text-anchor="middle" fill="#71717a" stroke="none" font-weight="bold">CÓMPUTO DISTRIBUIDO (TEE)</text>
-                        </g>
-                        
-                        <g transform="translate(0, 230)">
-                            <polygon points="225 20 375 70 225 120 75 70" stroke="#52525b" stroke-width="2" fill="#18181b" fill-opacity="0.8"/>
-                            <polyline points="215 45 235 45 205 75 235 75" stroke="#e11d48" stroke-width="2.5" />
-                            <text x="225" y="105" font-family="Geist Mono" font-size="11" text-anchor="middle" fill="#52525b" stroke="none" font-weight="bold">BASE INMUTABLE (BTC NATIVE)</text>
+                        <g id="layer-depin" transform="translate(0, 100)">
+                            <polygon points="250 30 430 70 250 110 70 70" stroke="#38bdf8" stroke-width="1.5" fill="url(#depin-grad)"/>
+                            <rect x="238" y="50" width="24" h="32" stroke="#38bdf8" stroke-width="1.2" fill="#0c4a6e" fill-opacity="0.3" />
+                            <line x1="242" y1="58" x2="258" y2="58" stroke="#38bdf8" stroke-width="1" />
+                            <line x1="242" y1="66" x2="258" y2="66" stroke="#38bdf8" stroke-width="1" />
+                            <line x1="242" y1="74" x2="258" y2="74" stroke="#38bdf8" stroke-width="1" />
+                            <circle cx="150" cy="70" r="4" stroke="#0284c7" stroke-width="1" /><circle cx="350" cy="70" r="4" stroke="#0284c7" stroke-width="1" />
+                            <line x1="154" y1="70" x2="238" y2="66" stroke="#0284c7" stroke-width="0.5" stroke-dasharray="3 3" />
+                            <line x1="346" y1="70" x2="262" y2="66" stroke="#0284c7" stroke-width="0.5" stroke-dasharray="3 3" />
+                            <text x="250" y="125" font-family="Geist Mono" font-size="11" text-anchor="middle" fill="#71717a" stroke="none" font-weight="700">LAYER_02 // CÓMPUTO SOBERANO (DePIN)</text>
                         </g>
 
-                        <text x="50" y="200" font-family="Geist Mono" font-size="10" transform="rotate(-90 50 200)" fill="#f43f5e" stroke="none" font-weight="700">SIGNAL AUTOMATIZACIÓN</text>
-                        <text x="400" y="200" font-family="Geist Mono" font-size="10" transform="rotate(-90 400 200)" fill="#34d399" stroke="none" font-weight="700">FLUJO LIQUIDEZ</text>
+                        <g id="layer-infra" transform="translate(0, 200)">
+                            <polygon points="250 30 430 70 250 110 70 70" stroke="#4b5563" stroke-width="1.5" fill="url(#infra-grad)"/>
+                            <polygon points="160 60 175 50 190 60 175 70" stroke="#f43f5e" stroke-width="1" fill="#1e1b4b" />
+                            <line x1="160" y1="60" x2="160" y2="68" stroke="#f43f5e" stroke-width="1" />
+                            <line x1="190" y1="60" x2="190" y2="68" stroke="#f43f5e" stroke-width="1" />
+                            <line x1="175" y1="70" x2="175" y2="78" stroke="#f43f5e" stroke-width="1" />
+                            <polygon points="160 68 175 78 190 68 175 70" stroke="#f43f5e" stroke-width="1" fill="#1e1b4b" />
+                            <path d="M 315 50 L 330 50 L 310 72 L 328 72 L 305 95" stroke="#e11d48" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <text x="250" y="125" font-family="Geist Mono" font-size="11" text-anchor="middle" fill="#4b5563" stroke="none" font-weight="700">LAYER_03 // LIQUIDACIÓN SOBERANA (BTC)</text>
+                        </g>
+
+                        <text x="35" y="190" font-family="Geist Mono" font-size="9" transform="rotate(-90 35 190)" fill="#f43f5e" stroke="none" font-weight="700" letter-spacing="1">AUTOMATION_SIGNAL</text>
+                        <text x="465" y="190" font-family="Geist Mono" font-size="9" transform="rotate(-90 465 190)" fill="#10b981" stroke="none" font-weight="700" letter-spacing="1">LIQUIDITY_FLOW</text>
                     </svg>
                 </div>
             </div>
@@ -279,7 +309,7 @@
                     </div>
                     
                     <p class="text-zinc-200 font-light text-base md:text-lg leading-snug">
-                        Ingeniería de incentivos y setups técnicos para la interacción económica directa entre agentes de IA y capas de infraestructura descentralizada (DePIN, mercados de cómputo, almacenamiento). Configuramos los sistemas para que tus aplicaciones causan y provean valor pagándose entre sí de forma autónoma.
+                        Ingeniería de incentives y setups técnicos para la interacción económica directa entre agentes de IA y capas de infraestructura descentralizada (DePIN, mercados de cómputo, almacenamiento). Configuramos los sistemas para que tus aplicaciones consuman y provean valor pagándose entre sí de forma autónoma.
                     </p>
 
                     <div class="space-y-2.5 pt-1">
@@ -312,13 +342,17 @@
                 <div class="flex items-start gap-3 pt-3 border-t border-zinc-950 text-zinc-100 font-medium"><span class="font-mono text-emerald-400 text-xs tracking-wider pt-0.5 select-none shrink-0">[07]</span><p>Si no me crees o no lo entiendes, no tengo tiempo para intentar convencerte, lo siento.</p></div>
             </div>
 
-            <div class="mt-8 font-mono text-[11px] md:text-xs uppercase tracking-[0.25em] text-orange-500 text-center min-h-[1.5rem] leading-relaxed select-none">
+            <div class="mt-8 font-mono text-xs uppercase tracking-[0.25em] text-orange-500 text-center min-h-[1.5rem] leading-relaxed select-none">
                 <span id="typewriter-cta"></span><span id="cta-cursor" class="w-1.5 h-3 bg-orange-500 inline-block animate-terminal-blink ml-1 translate-y-[1px] align-baseline opacity-0"></span>
             </div>
 
-            <div class="flex flex-col sm:flex-row gap-4 pt-4 max-w-4xl">
-                <a href="https://t.me/tu_usuario_telegram" target="_blank" class="flex-1 bg-emerald-400 text-black font-mono text-xs md:text-sm font-bold tracking-[0.25em] py-4 border border-emerald-400 hover:bg-black hover:text-emerald-400 transition-all duration-300 text-center uppercase rounded">[ EXEC : iniciar despliegue ]</a>
-                <a href="https://github.com/SignalOverShill" target="_blank" class="flex-1 bg-zinc-900 text-emerald-400 font-mono text-xs md:text-sm font-bold tracking-[0.25em] py-4 border border-emerald-700 hover:bg-emerald-400 hover:text-black transition-all duration-300 text-center uppercase rounded">[ INSPECT : revisar arquitectura ]</a>
+            <div class="flex flex-col sm:flex-row gap-4 pt-4 max-w-4xl w-full">
+                <a href="https://t.me/tu_usuario_telegram" target="_blank" class="flex-1 bg-emerald-400 text-black font-mono text-xs md:text-sm font-bold tracking-[0.25em] py-4 border border-emerald-400 hover:bg-black hover:text-emerald-400 transition-all duration-300 text-center uppercase rounded">
+                    [ EXEC : iniciar despliegue ]
+                </a>
+                <a href="https://github.com/SignalOverShill" target="_blank" class="flex-1 bg-zinc-900 text-emerald-400 font-mono text-xs md:text-sm font-bold tracking-[0.25em] py-4 border border-emerald-700 hover:bg-emerald-400 hover:text-black transition-all duration-300 text-center uppercase rounded">
+                    [ INSPECT : revisar arquitectura ]
+                </a>
             </div>
         </section>
 
