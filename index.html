@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SIGNAL OVER SHILL — Arquitectura de liquidez soberana y cómputo agéntico</title>
+    <title>SIGNAL OVER SHILL — Arquitectura de Liquidez Soberana</title>
+
+    <link rel="canonical" href="https://signalovershill.com/">
 
     <script src="https://cdn.tailwindcss.com"></script>
 
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;700&family=Geist:wght@300;400;500;600;700;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght=400;500;700&family=Geist:wght=300;400;500;600;700;900&display=swap');
         .font-sans { font-family: 'Geist', sans-serif; }
         .font-mono { font-family: 'Geist Mono', monospace; }
         .glow-line {
@@ -23,20 +25,43 @@
         }
     </style>
 
-    <meta name="description" content="Arquitectura de liquidez soberana, canales Bitcoin/Lightning y sistemas agénticos de distribución para equipos que ya mueven volumen en cripto y quieren desacoplarse de la banca tradicional y de las horas humanas.">
+    <meta name="description" content="Arquitectura BTC-native, canales Lightning y enjambres agénticos para equipos cripto que buscan liquidez soberana, automatización y menor fricción bancaria.">
     <meta name="language" content="es">
     <meta name="robots" content="index,follow">
 
-    <meta property="og:title" content="SIGNAL OVER SHILL — Arquitectura de liquidez soberana">
-    <meta property="og:description" content="Arquitectura BTC-native, canales Lightning y cómputo agéntico para mover capital fuera de la fricción bancaria y las horas humanas.">
+    <meta property="og:title" content="SIGNAL OVER SHILL — Arquitectura de Liquidez Soberana">
+    <meta property="og:description" content="Arquitectura BTC-native, canales Lightning y enjambres agénticos para liquidar saldos fuera del circuito bancario heredado.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://signalovershill.com">
+    <meta property="og:url" content="https://signalovershill.com/">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SIGNAL OVER SHILL — Arquitectura de Liquidez Soberana">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Signal Over Shill",
+      "url": "https://signalovershill.com/",
+      "description": "Arquitectura BTC-native, canales transaccionales Lightning Network y sistemas de computación agéntica autónoma para firmas cripto y entornos DePIN.",
+      "email": "_init_@signalovershill.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Barcelona",
+        "addressCountry": "ES"
+      },
+      "sameAs": [
+        "https://x.com/signalovershill",
+        "https://github.com/SignalOverShill"
+      ]
+    }
+    </script>
 </head>
 <body class="min-h-screen flex flex-col justify-between selection:bg-zinc-800 selection:text-emerald-400 overflow-x-hidden font-sans bg-black">
 
     <div class="absolute top-0 left-0 w-full h-[1px] glow-line pointer-events-none"></div>
     
-    <header class="max-w-6xl w-full mx-auto px-6 pt-12 pb-6 border-b border-zinc-900 flex justify-center sm:justify-between items-center gap-4">
+    <header class="max-w-6xl w-full mx-auto px-6 pt-12 pb-4 flex flex-col sm:flex-row justify-center sm:justify-between items-center gap-4">
         <div class="font-mono text-sm tracking-[0.15em] text-zinc-400 flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3 text-center sm:text-left">
             <span class="text-white font-black whitespace-nowrap text-base sm:text-xl tracking-tight">SIGNAL OVER SHILL</span>
             <span class="hidden sm:inline text-zinc-800">│</span>
@@ -49,9 +74,18 @@
         </div>
     </header>
 
+    <nav class="max-w-6xl w-full mx-auto px-6 pb-6 border-b border-zinc-900 flex justify-center sm:justify-start items-center gap-6 font-mono text-[10px] text-zinc-500 tracking-wider uppercase select-none">
+        <span class="text-zinc-700 hidden sm:inline">[ MENU :</span>
+        <a href="#cambio-soberano" class="hover:text-emerald-400 transition-colors duration-200">// MATRIZ</a>
+        <a href="#arquitectura-central" class="hover:text-emerald-400 transition-colors duration-200">// BLUEPRINT</a>
+        <a href="#modulos-operativos" class="hover:text-emerald-400 transition-colors duration-200">// SERVICIOS</a>
+        <a href="#manifiesto" class="hover:text-emerald-400 transition-colors duration-200">// SKIN_IN_THE_GAME</a>
+        <span class="text-zinc-700 hidden sm:inline">]</span>
+    </nav>
+
     <main class="max-w-6xl w-full mx-auto px-6 py-12 flex-grow space-y-24 lg:space-y-32">
 
-        <section class="relative space-y-10 max-w-5xl">
+        <section class="relative space-y-8 max-w-4xl">
             <div class="pointer-events-none absolute -top-10 -left-32 w-96 h-96 bg-emerald-500/5 blur-3xl rounded-full"></div>
 
             <div class="space-y-4 relative">
@@ -100,13 +134,10 @@
 
         <section class="w-full max-w-5xl">
             <div class="border border-zinc-900 bg-zinc-950/40 p-6 font-mono text-[11px] md:text-xs text-zinc-500 h-40 overflow-hidden relative rounded-lg shadow-[0_0_50px_rgba(0,0,0,0.8)] grid grid-cols-1 lg:grid-cols-12 gap-6 items-end">
-                
                 <div class="absolute top-3 right-5 text-[9px] tracking-[0.2em] text-emerald-400 font-bold uppercase flex items-center gap-1.5 bg-emerald-950/40 border border-emerald-900/30 px-2 py-0.5 rounded select-none">
                     <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 inline-block animate-ping"></span> Live_Compute_Stream
                 </div>
-
                 <div id="live-terminal-feed" class="space-y-1.5 select-none transition-all duration-300 lg:col-span-8 w-full"></div>
-
                 <div class="hidden lg:flex flex-col col-span-4 border-l border-zinc-900 pl-6 space-y-1.5 h-full justify-end text-[10px] pb-1 select-none">
                     <div class="text-zinc-400 font-bold uppercase tracking-wider mb-1">// COGNITIVE_METRICS</div>
                     <div class="flex justify-between"><span class="text-zinc-600">MODEL_SYNTAX_ACCURACY:</span> <span class="text-emerald-400 font-bold">99.42%</span></div>
@@ -116,14 +147,14 @@
             </div>
         </section>
 
-        <section class="space-y-6 border-t border-zinc-900 pt-10">
+        <section id="cambio-soberano" class="space-y-6 border-t border-zinc-900 pt-10">
             <div class="font-mono text-xs md:text-sm uppercase tracking-[0.2em] text-zinc-500 font-semibold text-left">
-                EL CAMBIO SOBERANO <br class="sm:hidden"> // FRICCIÓN VS. INFRAESTRUCTURA
+                EL CAMBIO SOBERANO <br> // FRICCIÓN VS. INFRAESTRUCTURA
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div class="border border-red-950/30 bg-red-950/5 p-6 space-y-3 rounded-lg text-left transition-colors duration-300 hover:border-red-900/50">
                     <div class="font-mono text-xs uppercase tracking-wider text-red-400 font-bold">// FRICCIÓN HEREDADA <br class="sm:hidden"> [LENTA &amp; FRÁGIL]</div>
-                    <ul class="space-y-2 text-sm lg:text-base text-zinc-400 font-light list-none pl-0">
+                    <ul class="space-y-2 text-sm text-zinc-400 font-light list-none pl-0">
                         <li class="flex items-start gap-2.5"><span class="text-red-500/70 shrink-0 pt-0.5">✕</span> <span>Conciliación manual, retrasos de clearing y burocracia corresponsal.</span></li>
                         <li class="flex items-start gap-2.5"><span class="text-red-500/70 shrink-0">✕</span> <span>Riesgo de contraparte y custodia discrecional centralizada.</span></li>
                         <li class="flex items-start gap-2.5"><span class="text-red-500/70 shrink-0">✕</span> <span>Pools de liquidez e información fragmentados en silos Web2.</span></li>
@@ -131,7 +162,7 @@
                 </div>
                 <div class="border border-emerald-950/30 bg-emerald-950/5 p-6 space-y-3 rounded-lg text-left transition-colors duration-300 hover:border-emerald-900/50">
                     <div class="font-mono text-xs uppercase tracking-wider text-emerald-400 font-bold">// ARQUITECTURA SOBERANA <br class="sm:hidden"> [INMEDIATA &amp; RESILIENTE]</div>
-                    <ul class="space-y-2 text-sm lg:text-base text-zinc-300 font-light list-none pl-0">
+                    <ul class="space-y-2 text-sm text-zinc-300 font-light list-none pl-0">
                         <li class="flex items-start gap-2.5"><span class="text-emerald-400 shrink-0 pt-0.5">✓</span> <span>Automatización algorítmica y liquidación instantánea on-chain.</span></li>
                         <li class="flex items-start gap-2.5"><span class="text-emerald-400 shrink-0">✓</span> <span>Entornos sin custodia (Non-Custodial) y confianza criptográfica.</span></li>
                         <li class="flex items-start gap-2.5"><span class="text-emerald-400 shrink-0">✓</span> <span>Orquestación unificada y acceso directo a liquidez global.</span></li>
@@ -140,7 +171,7 @@
             </div>
         </section>
 
-        <section class="space-y-8 border-t border-zinc-900 pt-10 max-w-5xl">
+        <section class="space-y-8 border-t border-zinc-900 pt-10 max-w-4xl">
             <div class="font-mono text-xs md:text-sm uppercase tracking-[0.2em] text-emerald-500 font-semibold text-left">
                 PALANCA ASIMÉTRICA <br> APALANCAMIENTO AGÉNTICO
             </div>
@@ -157,7 +188,7 @@
             </div>
         </section>
 
-        <section class="space-y-10 border-t border-zinc-900 pt-10">
+        <section id="arquitectura-central" class="space-y-10 border-t border-zinc-900 pt-10">
             <div class="font-mono text-xs md:text-sm uppercase tracking-[0.2em] text-zinc-500 font-semibold text-left">
                 ARQUITECTURA CENTRAL <br> // EL STACK DE LIQUIDEZ SOBERANA
             </div>
@@ -179,7 +210,7 @@
                 </div>
 
                 <div class="flex-1 w-full max-w-xl bg-black rounded-lg overflow-hidden border border-zinc-900/80 shadow-2xl relative aspect-video group">
-                    <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-contain bg-black z-10 opacity-0 transition-opacity duration-700" onplay="this.classList.remove('opacity-0')">
+                    <video autoplay loop muted playsinline preload="metadata" class="absolute inset-0 w-full h-full object-contain bg-black z-10 opacity-0 transition-opacity duration-700" onplay="this.classList.remove('opacity-0')">
                         <source src="sovereign-stack.mp4" type="video/mp4">
                     </video>
                     <div class="absolute inset-0 flex flex-col items-center justify-center p-6 bg-[#070708] font-mono text-xs text-[#10b981] select-none">
@@ -198,13 +229,12 @@
             </div>
         </section>
 
-        <section class="space-y-10 border-t border-zinc-900 pt-10 text-left">
+        <section id="modulos-operativos" class="space-y-10 border-t border-zinc-900 pt-10 text-left">
             <div class="font-mono text-xs md:text-sm uppercase tracking-[0.25em] text-zinc-500 font-semibold">
                 RESOLVAMOS TU DOLOR <br> // MÓDULOS OPERATIVOS
             </div>
 
             <div class="grid grid-cols-1 gap-10 w-full">
-                
                 <div class="border border-zinc-900 bg-zinc-950/40 rounded-lg p-6 md:p-8 shadow-[0_0_40px_rgba(0,0,0,0.6)] grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
                     <div class="space-y-5 lg:col-span-8 w-full">
                         <div class="font-mono text-sm md:text-base tracking-tight text-white font-bold leading-tight border-b border-zinc-900 pb-3">
@@ -294,11 +324,10 @@
                         <div class="pt-2 border-t border-zinc-900 text-[11px] leading-normal"><span class="text-zinc-400 font-bold">Retorno:</span> <span class="text-emerald-400/90 font-medium">Modelos de negocio nativos de la era agéntica con costes operativos tendientes a cero.</span></div>
                     </div>
                 </div>
-
             </div>
         </section>
 
-        <section id="skin-in-the-game-section" class="space-y-8 border-t border-zinc-900 pt-12 w-full text-left">
+        <section id="manifiesto" class="space-y-8 border-t border-zinc-900 pt-12 w-full text-left">
             <h2 class="font-sans text-xl md:text-2xl font-black tracking-tight text-white uppercase flex items-center gap-2 select-none">
                 <span class="text-emerald-500 font-mono text-sm tracking-normal font-bold">//</span> SKIN IN THE GAME
             </h2>
@@ -351,12 +380,11 @@
             
             const ctaSpan = document.getElementById("typewriter-cta");
             const ctaCursor = document.getElementById("cta-cursor");
-            const ctaTargetSection = document.getElementById("skin-in-the-game-section");
+            const ctaTargetSection = document.getElementById("manifiesto");
             const ctaPhrase = "// SI TODO ESTO TE RESULTA OBVIO, EJECUTA";
             let ctaCharIndex = 0;
             let ctaTriggered = false;
 
-            // Logs refinados para sonar a "Validación continua", "Ingestión asíncrona" y "Síntesis narrativa"
             const logTemplates = [
                 { sys: "SYS_ENG", msg: "Changelog analysis completed // Compiling structural signal matrices." },
                 { sys: "LN_NODE", msg: "Routing liquidity path // 3,450 sats settled via Lightning Network." },
