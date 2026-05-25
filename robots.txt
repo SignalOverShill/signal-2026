@@ -1,0 +1,6 @@
+# SIGNAL OVER SHILL — RASTREO OPERATIVO DE NODO
+User-agent: *
+Allow: /
+
+# Ubicación del índice semántico de infraestructura
+Sitemap: https://signalovershill.com/sitemap.xml
